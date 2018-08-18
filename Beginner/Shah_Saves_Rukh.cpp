@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-#define N  100005
 #define ll long long
 ll f1(ll n)
 {
