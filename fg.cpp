@@ -127,22 +127,22 @@ Node* removed(Node* head[],int val)
 	tmp[val%10]=tmp[val%10]->next;
 	else
 	{
-		while(tmp[x%10]!=NULL && tmp[val%10]->next!=NULL)
+		while(tmp[val%10]!=NULL && tmp[val%10]->next!=NULL)
 		{
-			if(tmp[x%10]->next->x==x)
+			if(tmp[val%10]->next->data==val)
 			{
-				tmp[x%10]->next=tmp[x%10]->next->next;
-				free(tmp[x%10]->next);
+				tmp[val%10]->next=tmp[val%10]->next->next;
+				free(tmp[val%10]->next);
 				c=1;
 				break;
 			}
-			tmp[x%10]=tmp[x%10]->next;
+			tmp[val%10]=tmp[val%10]->next;
 		}
 
 		if(!c)
 		cout<<"Not Present\n";
 	}
-	return tmp[x%10];
+	return tmp[val%10];
 }
 
 void Union(Node* hd1[],Node* hd2[],int size1,int size2,Node* unin[])
